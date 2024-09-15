@@ -1,0 +1,271 @@
+:root {
+    font-family: 'Verdana';
+    background-color: #EEE;
+
+    --drop-shadow-tag-color: #7773;
+    --drop-shadow-image-color: #7777;
+
+    --primary-color-75: hsl(45, 100%, 75%);
+    --primary-color-25: hsl(45, 100%, 25%);
+
+    background-image: url(background.png);
+    background-size: 300px;
+    background-blend-mode: lighten;
+}
+
+ul {
+    margin: unset;
+}
+
+a {
+    color: var(--primary-color-25);
+}
+
+body {
+    margin: unset;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    min-height: 0px;
+
+    display: flex;
+}
+
+#resume,
+#portfolio {
+    padding: 50px;
+    min-height: auto;
+    overflow-y: scroll;
+}
+
+#resume {
+    flex-basis: 35%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#resume {
+    align-items: center;
+}
+
+.minor {
+    font-size: smaller;
+}
+
+#profile-picture {
+    flex-shrink: 0;
+
+    background-image: url(profile-picture.jpg);
+    background-size: cover;
+
+    margin: 30px;
+    --image-size: 240px;
+    width: var(--image-size);
+    height: var(--image-size);
+    border-radius: 50%;
+
+    filter: drop-shadow(5px 5px 10px var(--drop-shadow-image-color))
+}
+
+#person {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+
+    text-align: center;
+}
+
+#name {
+    font-size: xx-large;
+}
+
+#role {
+    font-size: x-large;
+    color: var(--primary-color-25);
+    text-transform: uppercase;
+}
+
+section.default {
+    
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+section.default .section-title {
+    font-size: large;
+    font-weight: bold;
+}
+
+#skills-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#languages-list,
+#contact-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.tag-list {
+    text-align: center;
+}
+
+.tag-list > * {
+
+    line-height: initial;
+
+    font-size: small;
+    background-color: var(--primary-color-75);
+    padding: 3px 12px 3px 12px;
+    margin: 3px 5px;
+    display: inline-block;
+    border-radius: 1em;
+
+    filter: drop-shadow(3px 3px 3px var(--drop-shadow-tag-color))
+}
+
+#essentials {
+    display: grid;
+
+    row-gap: 5px;
+    column-gap: 20px;
+}
+
+#essentials > .label {
+    font-weight: bold;
+}
+
+#essentials > .info {
+    grid-column: 2;
+}
+
+#education-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#institute {
+    font-style: italic;
+}
+
+
+#portfolio {
+    flex-basis: 65%;
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 150px;
+
+    padding-top: 160px;
+    padding-bottom: 160px;
+    grid-column: 2;
+}
+
+#portfolio-title {
+    font-size: xx-large;
+}
+
+.project {
+    display: flex;
+}
+
+.project-duration {
+    flex-shrink: 0;
+    width: 90px;
+    overflow-y: hidden;
+    
+    font-size: small;
+    color: var(--primary-color-25);
+    text-align: right;
+
+    border-right: 2px #7777 solid;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.project-content {
+    padding-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project-content section {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project-title {
+    font-size: x-large;
+}
+
+.project-subtitle {
+    font-size: small;
+}
+
+.client-label {
+    font-weight: bold;
+}
+
+.project-content section .title {
+    font-size: large;
+}
+
+.project-content section .content {
+    font-size: small;
+    text-align: justify;
+}
+
+#contact-prompt {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#contact-prompt-title {
+    font-weight: bold;
+}
+
+#background-credits,
+#lang-selection {
+    position: absolute;
+    bottom: 0px;
+
+    padding: 5px;
+
+    font-size: small;
+    color: #7777;
+    background: white;
+}
+
+#lang-selection {
+    left: 0px;
+}
+
+#background-credits {
+    right: 0px;
+
+    z-index: -1;
+    user-select: none;
+}
