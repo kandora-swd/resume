@@ -1,0 +1,43 @@
+
+:root {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    
+    background: unset;
+}
+
+#lang-selection {
+    display: none;
+}
+
+#background-credits {
+    display: none;
+}
+
+main {
+    display: unset;
+}
+
+#resume,
+#portfolio {
+    padding: 20px;
+    min-height: unset;
+    overflow-y: unset;
+}
+
+section.default {
+    page-break-inside: avoid;
+}
+
+#contact,
+#links {
+    display: none;
+}
+
+#portfolio {
+    gap: 50px;
+}
+
+.project-content section {
+    page-break-inside: avoid;
+}
